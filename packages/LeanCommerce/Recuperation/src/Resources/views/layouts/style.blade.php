@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="{{ asset('vendor/recuperation/assets/css/admin.css') }}">

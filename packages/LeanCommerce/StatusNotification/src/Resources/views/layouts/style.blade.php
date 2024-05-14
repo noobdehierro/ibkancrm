@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="{{ asset('vendor/statusnotification/assets/css/admin.css') }}">

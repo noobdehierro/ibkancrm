@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="{{ asset('vendor/statushistory/assets/css/admin.css') }}">
