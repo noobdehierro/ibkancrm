@@ -6,6 +6,6 @@ return [
         'name' => 'Debtor',
         'route' => 'admin.debtor.index',
         'sort' => 12,
-        'icon-class' => 'temp-icon',
+        'icon-class' => 'tools-icon',
     ]
 ];

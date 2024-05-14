@@ -6,6 +6,6 @@ return [
         'name' => 'Payment',
         'route' => 'admin.payment.index',
         'sort' => 15,
-        'icon-class' => 'temp-icon',
+        'icon-class' => 'tools-icon',
     ]
 ];

@@ -6,6 +6,6 @@ return [
         'name' => 'Clarification',
         'route' => 'admin.clarification.index',
         'sort' => 11,
-        'icon-class' => 'temp-icon',
+        'icon-class' => 'tools-icon',
     ]
 ];

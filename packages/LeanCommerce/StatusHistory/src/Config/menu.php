@@ -6,6 +6,6 @@ return [
         'name' => 'StatusHistory',
         'route' => 'admin.statushistory.index',
         'sort' => 17,
-        'icon-class' => 'temp-icon',
+        'icon-class' => 'tools-icon',
     ]
 ];

@@ -6,6 +6,6 @@ return [
         'name' => 'Recuperation',
         'route' => 'admin.recuperation.index',
         'sort' => 16,
-        'icon-class' => 'temp-icon',
+        'icon-class' => 'tools-icon',
     ]
 ];

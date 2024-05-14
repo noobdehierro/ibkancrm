@@ -6,6 +6,6 @@ return [
         'name' => 'Map',
         'route' => 'admin.map.index',
         'sort' => 14,
-        'icon-class' => 'temp-icon',
+        'icon-class' => 'tools-icon',
     ]
 ];

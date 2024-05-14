@@ -6,6 +6,6 @@ return [
         'name' => 'Agreement',
         'route' => 'admin.agreement.index',
         'sort' => 10,
-        'icon-class' => 'temp-icon',
+        'icon-class' => 'tools-icon',
     ]
 ];

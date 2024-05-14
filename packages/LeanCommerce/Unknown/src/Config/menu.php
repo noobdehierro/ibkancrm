@@ -6,6 +6,6 @@ return [
         'name' => 'Unknown',
         'route' => 'admin.unknown.index',
         'sort' => 19,
-        'icon-class' => 'temp-icon',
+        'icon-class' => 'tools-icon',
     ]
 ];
