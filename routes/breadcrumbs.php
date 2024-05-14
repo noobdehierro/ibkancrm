@@ -350,3 +350,8 @@ Breadcrumbs::for('configuration.slug', function (BreadcrumbTrail $trail, $slug) 
     $trail->parent('configuration');
     $trail->push('', route('admin.configuration.index', ['slug' => $slug]));
 });
+
+Breadcrumbs::for('debtors', function (BreadcrumbTrail $trail) {
+    $trail->parent('dashboard');
+    $trail->push(' Debtors', route('admin.debtor.index'));
+});

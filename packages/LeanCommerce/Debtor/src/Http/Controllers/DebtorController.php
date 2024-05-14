@@ -6,10 +6,21 @@ use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use LeanCommerce\Debtor\Datagrids\DebtorDataGrid;
+use LeanCommerce\Debtor\Repositories\DebtorRepository;
 
 class DebtorController extends Controller
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    protected $debtorRepository;
+
+    public function __construct(DebtorRepository $debtorRepository)
+    {
+        $this->debtorRepository = $debtorRepository;
+
+        request()->request->add(['entity_type' => 'debtors']);
+    }
 
     /**
      * Display a listing of the resource.
@@ -18,6 +29,15 @@ class DebtorController extends Controller
      */
     public function index()
     {
+        if (request()->ajax()) {
+            return app(\LeanCommerce\Debtor\Datagrids\DebtorDataGrid::class)->toJson();
+        }
+
+        // $debtors = $debtorRepository->all();
+
+        // return view('debtor::index', compact('debtors'));
+        // dd($this->debtorRepository->all());
+
         return view('debtor::index');
     }
 
@@ -28,7 +48,6 @@ class DebtorController extends Controller
      */
     public function create()
     {
-
     }
 
     /**
@@ -38,7 +57,6 @@ class DebtorController extends Controller
      */
     public function store()
     {
-        
     }
 
     /**
@@ -49,7 +67,6 @@ class DebtorController extends Controller
      */
     public function edit($id)
     {
-
     }
 
     /**
@@ -60,7 +77,6 @@ class DebtorController extends Controller
      */
     public function update($id)
     {
-        
     }
 
     /**
@@ -71,6 +87,5 @@ class DebtorController extends Controller
      */
     public function destroy($id)
     {
-        
     }
 }

@@ -1,23 +1,30 @@
 @extends('admin::layouts.master')
 
 @section('page_title')
-    Package Debtor
+    {{ __('debtor::app.debtor.name') }}
 @stop
 
 @section('content-wrapper')
+    <div class="content full-page">
+        <table-component data-src="{{ route('admin.debtor.index') }}">
+            <template v-slot:table-header>
+                <h1>
+                    {!! view_render_event('admin.debtor.index.header.before') !!}
 
-    <div class="content full-page dashboard">
-        <div class="page-header">
-            <div class="page-title">
-                <h1>Package Debtor</h1>
-            </div>
+                    {{ Breadcrumbs::render('debtors') }}
 
-            <div class="page-action">
-            </div>
-        </div>
+                    {{ __('debtor::app.debtor.name') }}
 
-        <div class="page-content">
-        </div>
+                    {!! view_render_event('admin.debtor.index.header.after') !!}
+                </h1>
+            </template>
+
+            {{-- @if (bouncer()->hasPermission('debtor.edit')) --}}
+            {{-- <template v-slot:table-action> --}}
+            {{-- <a href="{{ route('admin.debtor.edit') }}"
+                        class="btn btn-md btn-primary">{{ __('admin::app.debtor.create-title') }}</a> --}}
+            {{-- </template> --}}
+            {{-- @endif --}}
+            <table-component>
     </div>
-
 @stop
